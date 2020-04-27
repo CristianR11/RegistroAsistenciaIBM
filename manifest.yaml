@@ -1,0 +1,12 @@
+applications:
+- path: dist
+- command: NODE_ENV=production npm start
+  name: simple-toolchain-20190809145702072
+  env:
+      NPM_CONFIG_PRODUCTION: false
+  memory: 512M
+  instances: 1
+  buildpacks: 
+    - sdk-for-nodejs
+  routes:
+  - route: meetups-ibm-col.mybluemix.net
