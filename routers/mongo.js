@@ -37,8 +37,8 @@ module.exports = function(app){
 	  });*/
 	  
 	//Conexión compose for posgresql
-
-	mongoose.connect('mongodb://admin:XWKHJRUVVWSYAAAR@portal-ssl1151-42.bmix-dal-yp-af06f2ca-9e3c-438f-a3b3-2128a47c1935.1010670159.composedb.com:20945,portal-ssl1246-43.bmix-dal-yp-af06f2ca-9e3c-438f-a3b3-2128a47c1935.1010670159.composedb.com:20945/compose?authSource=admin&ssl=true', options)
+	  //credenciales  mongodb://admin:XWKHJRUVVWSYAAAR@portal-ssl1151-42.bmix-dal-yp-af06f2ca-9e3c-438f-a3b3-2128a47c1935.1010670159.composedb.com:20945,portal-ssl1246-43.bmix-dal-yp-af06f2ca-9e3c-438f-a3b3-2128a47c1935.1010670159.composedb.com:20945/compose?retryWrites=false&authSource=admin&ssl=true
+	mongoose.connect('mongodb://admin:XWKHJRUVVWSYAAAR@portal-ssl1151-42.bmix-dal-yp-af06f2ca-9e3c-438f-a3b3-2128a47c1935.1010670159.composedb.com:20945,portal-ssl1246-43.bmix-dal-yp-af06f2ca-9e3c-438f-a3b3-2128a47c1935.1010670159.composedb.com:20945/compose?retryWrites=false&authSource=admin&ssl=true', options)
   		.catch((err) => {
     		if (err) console.error(err);
   	});

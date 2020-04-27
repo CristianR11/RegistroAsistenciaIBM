@@ -8,6 +8,7 @@
       fixed
       dark
       app
+      temporary
     >
       <v-list>
         <v-list-item
@@ -92,13 +93,13 @@ export default {
       right: true,
       rightDrawer: false,
       title: "",
-
       direction: "bottom",
       fab: false,
       top: true,
       right: true,
       dialog: true,
-      country:''
+      country:'',
+      group: null,
     };
   },
   computed: {
@@ -117,6 +118,9 @@ export default {
   },
 
   watch: {
+    group() {
+        this.drawer = false
+      },
     top(val) {
       this.bottom = !val;
     },

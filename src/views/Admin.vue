@@ -35,12 +35,7 @@ export default {
   data() {
     return {
       headers: [
-        {
-          text: "Name",
-          align: "start",
-          sortable: false,
-          value: "name",
-        },
+        { text: "Nombre", value: "name" },
         { text: "Apellido", value: "lastname" },
         { text: "Empresa", value: "company" },
         { text: "Cargo", value: "position" },
