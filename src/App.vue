@@ -69,7 +69,7 @@
     </v-content>
 
     <v-footer :fixed="fixed" app dark>
-      <span>&copy; IBM - 2019</span>
+      <span>&copy; IBM - 2020</span>
     </v-footer>
   </v-app>
 </template>
@@ -83,9 +83,10 @@ export default {
       fixed: false,
       items: [
           { title: 'Inicio', icon: 'fa-home', route:'/'},
+          //{ title: 'Encuestas', icon: 'fa-table',route:'/survey' },
+          { title: 'Registra tu asistencia', icon: 'fa-handshake',route:'/registroev' },
+          { title: 'Administrador', icon: 'fa-user-shield',route:'/admin' },
           { title: 'Calendario', icon: 'fa-calendar',route:'/calendar' },
-          { title: 'Encuestas', icon: 'fa-table',route:'/survey' },
-          //{ title: 'Registro evento', icon: 'fa-handshake',route:'/registroev' },
         ],
       miniVariant: false,
       right: true,

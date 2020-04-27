@@ -1,20 +1,3 @@
-/*
-  Licensed to the Apache Software Foundation (ASF) under one
-  or more contributor license agreements.  See the NOTICE file
-  distributed with this work for additional information
-  regarding copyright ownership.  The ASF licenses this file
-  to you under the Apache License, Version 2.0 (the
-  "License"); you may not use this file except in compliance
-  with the License.  You may obtain a copy of the License at
-    http://www.apache.org/licenses/LICENSE-2.0
-  Unless required by applicable law or agreed to in writing,
-  software distributed under the License is distributed on an
-  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-  KIND, either express or implied.  See the License for the
-  specific language governing permissions and limitations
-  under the License.
- */
-
 'use strict';
 
 const mongoose = require('mongoose');
@@ -27,17 +10,35 @@ module.exports = function(app){
 	app.use(bodyParser.urlencoded({ extended: true }));// manaje api data 
 	app.use(bodyParser.json());
 
-	const options = {
+	//Configuracion para la conexión local
+	/*const options = {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		//ssl: true,
 		poolSize: 1,
 		reconnectTries: 1
+	};*/
+
+	//configuración para la conexión con compose for mongo
+	const options = {
+		poolSize: 1,
+		reconnectTries: 1,
+		useNewUrlParser: true
 	};
+
 
 	mongoose.Promise = global.Promise;
 
+	//Conexión local
+	/*
 	mongoose.connect(mongo_url, options)
+  		.catch((err) => {
+    		if (err) console.error(err);
+	  });*/
+	  
+	//Conexión compose for posgresql
+
+	mongoose.connect('mongodb://admin:XWKHJRUVVWSYAAAR@portal-ssl1151-42.bmix-dal-yp-af06f2ca-9e3c-438f-a3b3-2128a47c1935.1010670159.composedb.com:20945,portal-ssl1246-43.bmix-dal-yp-af06f2ca-9e3c-438f-a3b3-2128a47c1935.1010670159.composedb.com:20945/compose?authSource=admin&ssl=true', options)
   		.catch((err) => {
     		if (err) console.error(err);
   	});

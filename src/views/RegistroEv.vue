@@ -4,15 +4,15 @@
     text-xs-center
     wrap
     >
-      <v-flex xs12 md6>
+      <v-flex xs12 md7>
         <v-img
-        :src="require('../assets/IoT.jpg')"
+        :src="require('../assets/Watson Asistant.jpg')"
         class="py-1"
         contain
         >
           </v-img>
         </v-flex>
-      <v-flex xs12 md6>
+      <v-flex xs12 md5>
         <v-form
         ref="form"
         @submit.prevent="reset"
@@ -150,7 +150,7 @@ class Registrant{
         })
         .catch(error => {
           console.log(error);
-          
+        this.$route.replace('');
         this.snackbar=true;
         this.colorValue='error';
         this.text='REGISTRO FALLIDO';

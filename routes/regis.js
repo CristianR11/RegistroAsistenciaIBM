@@ -13,6 +13,12 @@ router.post('/registrants/',async (req,res) =>{
   });
 });
 
+router.get("/registrants", function(req, res, next) {
+  Registrants.find(function(err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
 
 router.get('/events/',async (req,res) =>{
   const Event = await event.find();

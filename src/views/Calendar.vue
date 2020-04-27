@@ -63,7 +63,7 @@
           offset-x
         >
           <v-card
-            color="grey lighten-4"
+            color="indigo lighten-1"
             min-width="350px"
             flat
           >
@@ -99,7 +99,6 @@
 </template>
 
 <script>
-  
   export default {
     data: () => ({
       today: new Date(),

@@ -19,6 +19,7 @@
     "core-js": "^2.6.5",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
+    "firebase": "7.14.2",
     "flatted": "^2.0.1",
     "ibm-cloud-env": "^0.2.6",
     "log4js": "^4.5.1",
@@ -26,6 +27,7 @@
     "morgan": "^1.9.1",
     "sass-loader": "^7.1.0",
     "vue": "^2.6.10",
+    "vue-material": "1.0.0-beta-12",
     "vue-router": "^3.0.3",
     "vuetify": "^2.0.0",
     "vuex": "^3.0.1"

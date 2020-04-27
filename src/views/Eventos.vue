@@ -1,38 +1,20 @@
 <template>
    <v-layout justify-center align-center row wrap>
-    <v-flex xs12 md8 xl8>
-      <v-carousel
-      :show-arrows="false"
-      height="350">
-      <v-carousel-item
-        contain
-        v-for="(item,i) in events"
-        :key="i"
-        :src="item.src"
-
-      ></v-carousel-item>
-    </v-carousel>
-  </v-flex>
 
   <v-flex xs12 md12>
-    
   </v-flex>
   <v-spacer/>
     <v-flex
-    md3
+    md6
     v-for="(item,i) in events"
     :key="i">
     <v-card>
         <v-img
           :src="item.src"
-          
         ></v-img>
 
         <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">{{item.title}}</h3>
-            <div> {{ item.details }} </div>
-          </div>
+            <div class="title"> {{ item.details }} </div>
         </v-card-title>
 
         <v-card-actions>
@@ -41,23 +23,13 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <v-flex xs12 md12>
-      <v-sheet height="500">
-        <v-calendar
-          color="primary"
-          :now=today
-          :value=today
-          :events="events"
-        ></v-calendar>
-      </v-sheet>
-    </v-flex>
   </v-layout>
 
 </template>
 <script>
-import image from "@/assets/IoT.jpg"
+import image from "@/assets/Watson Asistant.jpg"
  
-import image2 from "../assets/navidad.jpg"
+
   export default {
     components: {
       
@@ -71,13 +43,12 @@ import image2 from "../assets/navidad.jpg"
        
         events: [
         {
-          name: 'IoT en Cloud para empresas',
-          details: 'Laura Ordoñez, Nicolas Davila y Jairo Reyes',
+          name: 'Watson Asitant',
+          details: 'Webinar 04/2020 - IBM Cloud',
           route:"/registroev",
-          start: '2019-12-05',
+          start: '2020-04-28',
           src: image,
         },
-        {src:image2, start: '2019-12-25',}
       ]
       }
     }
