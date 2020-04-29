@@ -47,8 +47,8 @@ export default {
       alert: true,
       rules: {
         required: (value) => !!value || "Required.",
-        min: (v) => v.length >= 8 || "Debe tener minimo 8 caracteres",
-        emailMatch: () => "El correo proporcionado no es valido",
+        min: (v) => v.length >= 8 || "Min 8 characters",
+        emailMatch: (mail) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail) || "El correo ingresado no es valido",
       },
     };
   },

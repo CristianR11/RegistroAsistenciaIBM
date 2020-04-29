@@ -115,7 +115,7 @@ class Registrant{
       colorValue:'',
       text:'',
       rules: {
-        emailMatch: () => "El correo proporcionado no es valido",
+        emailMatch: (mail) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail) || "El correo ingresado no es valido",
         numeric: (data1) => (!isNaN(parseFloat(data1)) && isFinite(data1)) || "No es un numero valido",
         }
       };
