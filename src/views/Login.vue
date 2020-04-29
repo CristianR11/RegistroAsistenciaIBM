@@ -6,7 +6,7 @@
         <v-text-field
           prepend-inner-icon="fa-user"
           v-model="user"
-          :rules="[rules.required, rules.min]"
+          :rules="[rules.required, rules.emailMatch]"
           label="Usuario"
           class="text1"
           solo
@@ -47,8 +47,8 @@ export default {
       alert: true,
       rules: {
         required: (value) => !!value || "Required.",
-        min: (v) => v.length >= 8 || "Min 8 characters",
-        emailMatch: () => "The email and password you entered don't match",
+        min: (v) => v.length >= 8 || "Debe tener minimo 8 caracteres",
+        emailMatch: () => "El correo proporcionado no es valido",
       },
     };
   },

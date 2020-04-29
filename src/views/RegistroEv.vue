@@ -50,6 +50,7 @@
           <v-text-field
             prepend-inner-icon="fa-envelope"
             v-model="registrant.email"
+            :rules="[rules.required, rules.emailMatch]"
             label="E-mail"
             solo
             ></v-text-field>
@@ -57,6 +58,7 @@
           <v-text-field
             prepend-inner-icon="fa-mobile-alt"
             v-model="registrant.phone"
+            :rules="[rules.required, rules.numeric]"
             label="Telefono"
             solo
             ></v-text-field>
@@ -104,23 +106,26 @@ class Registrant{
   export default {
     data () {
       return {
-        alertS:false,
-        alertE:false,
-        registrant: new Registrant(),
-        registrants:[],
-        snackbar:false,
-        succA: false,
+      alertS:false,
+      alertE:false,
+      registrant: new Registrant(),
+      registrants:[],
+      snackbar:false,
+      succA: false,
       colorValue:'',
-      text:''
-      }
+      text:'',
+      rules: {
+        emailMatch: () => "El correo proporcionado no es valido",
+        numeric: (data1) => (!isNaN(parseFloat(data1)) && isFinite(data1)) || "No es un numero valido",
+        }
+      };
     },
     methods: {
        reset () {
         this.$refs.form.reset()
       },
       get(){
-        
-        
+
         axios.get('/api/registrant/')
         .then(response => {
         console.log(response);

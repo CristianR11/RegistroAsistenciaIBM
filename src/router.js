@@ -51,6 +51,7 @@ const router = new Router({
  router.beforeEach((to, from, next) => {
   let user = firebase.auth().currentUser;
   let autorizacion = to.matched.some(record => record.meta.autentificado);
+  console.log('validando');
   console.log(to.name);
   console.log(`Autenticacion: ${autorizacion}`)
   console.log(`Autenticacion y usuario: ${(autorizacion && user != null)}`)
