@@ -58,7 +58,7 @@
           <v-text-field
             prepend-inner-icon="fa-mobile-alt"
             v-model="registrant.phone"
-            :rules="[rules.required, rules.numeric]"
+            :rules="[rules.required, rules.required]"
             label="Telefono"
             solo
             ></v-text-field>
@@ -115,6 +115,7 @@ class Registrant{
       colorValue:'',
       text:'',
       rules: {
+        required: (value) => !!value || "Required.",
         emailMatch: (mail) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail) || "El correo ingresado no es valido",
         numeric: (data1) => (!isNaN(parseFloat(data1)) && isFinite(data1)) || "No es un numero valido",
         }
