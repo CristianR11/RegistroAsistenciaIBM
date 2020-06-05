@@ -63,18 +63,18 @@ import image2 from "@/assets/Red Hat Open Shift on Cloud.jpg"
        
         events: [
         {
-          name: 'Watson Asitant',
-          details: 'Webinar 04/2020 - IBM Cloud',
-          route:"/registroev",
-          start: '2020-04-28',
-          src: image,
-        },
-        {
           name: 'Red Hat Open Shift on Cloud',
           details: 'Webinar 06/2020 - IBM Cloud',
           route:"/registroev",
           start: '2020-06-10',
           src: image2,
+        },
+        {
+          name: 'Watson Asitant',
+          details: 'Webinar 04/2020 - IBM Cloud',
+          route:"/registroev",
+          start: '2020-04-28',
+          src: image,
         },
       ]
       }
