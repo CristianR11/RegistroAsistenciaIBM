@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer
-      src="./assets//fondo12.jp2"
+      src="./assets//fondo12.jpg"
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
