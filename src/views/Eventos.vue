@@ -48,7 +48,7 @@
 <script>
 import image from "@/assets/Watson Asistant.jpg"
 import image2 from "@/assets/Red Hat Open Shift on Cloud.jpg"
- 
+import image3 from "@/assets/webinar-schematics.jpg" 
 
   export default {
     components: {
@@ -59,9 +59,16 @@ import image2 from "@/assets/Red Hat Open Shift on Cloud.jpg"
         
         valor:null,
         date:new Date(),
-        today:'2020-06-04',
+        today:'2020-06-24',
        
         events: [
+        {
+          name: 'Webinar IBM Cloud Schematics',
+          details: 'Webinar 06/2020 - IBM Cloud',
+          route:"/registroev",
+          start: '2020-06-24',
+          src: image3,
+        },
         {
           name: 'Red Hat Open Shift on Cloud',
           details: 'Webinar 06/2020 - IBM Cloud',
