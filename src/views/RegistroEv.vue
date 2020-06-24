@@ -6,7 +6,7 @@
     >
       <v-flex xs12 md7>
         <v-img
-        :src="require('../assets/Red Hat Open Shift on Cloud.jpg')"
+        :src="require('../assets/webinar-schematics.jpg')"
         class="py-1"
         contain
         >
