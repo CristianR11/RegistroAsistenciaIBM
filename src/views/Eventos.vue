@@ -58,14 +58,14 @@ import image from "@/assets/webinardata.png"
         
         valor:null,
         date:new Date(),
-        today:'2020-07-01',
+        today:'2020-07-10',
        
         events: [
         {
           name: 'Aplicación modelos machine learning - IBM Cloud',
           details: 'Webinar 07/2020 - IBM Cloud',
           route:"/registroev",
-          start: '2020-07-01',
+          start: '2020-07-10',
           src: image,
         },
       ]
