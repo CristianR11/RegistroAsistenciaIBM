@@ -6,7 +6,7 @@
     >
       <v-flex xs12 md7>
         <v-img
-        :src="require('../assets/webinar-schematics.jpg')"
+        :src="require('../assets/webinardata.png')"
         class="py-1"
         contain
         >
